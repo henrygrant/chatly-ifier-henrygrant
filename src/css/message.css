@@ -1,0 +1,101 @@
+/* message styles (general) */
+.message {
+    margin-top: 25px;
+    display: flex;
+}
+
+.message .imageContainer .image {
+    margin-top: 10px;
+    clip-path: circle(50% at 50% 50%);
+    height: 45px;
+}
+
+.message .arrowContainer {
+    position: relative;
+}
+.message .arrowContainer .arrow {
+    position: absolute;
+    top: 23px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+.message .contentContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 6px;
+}
+.message:not(.focused) .contentContainer {
+    background-color: #f3f3f3;
+}
+.message.focused .contentContainer {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 15px 50px 0px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 15px 50px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 15px 50px 0px rgba(0, 0, 0, 0.13);
+}
+.message .contentContainer .text {
+    font-size: 16px;
+    color: #333333;
+}
+.message .contentContainer .info {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.message .contentContainer .info .username {
+    margin-right: 22px;
+}
+.message .contentContainer .info .timestamp {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 12px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.message .contentContainer .info .timestamp .clockIcon {
+    margin-right: 4px;
+}
+
+/* incoming messages */
+.message:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+.message:nth-child(odd):not(.focused) .arrowContainer .arrow {
+    left: 0px;
+    border-left: 8px solid #f3f3f3;
+}
+.message:nth-child(odd).focused .arrowContainer .arrow {
+    left: 0px;
+    border-left: 8px solid #ffffff;
+}
+.message:nth-child(odd) .imageContainer .image {
+    margin-left: 45px;
+}
+.message:nth-child(odd) .contentContainer .info .username {
+    font-weight: bold;
+    color: #56a2ff
+}
+
+/* outgoing messages */
+.message:nth-child(even) {
+    flex-direction: row;
+}
+.message:nth-child(even):not(.focused) .arrowContainer .arrow {
+    right: 0px;
+    border-right: 8px solid #f3f3f3;
+}
+.message:nth-child(even).focused .arrowContainer .arrow {
+    right: 0px;
+    border-right: 8px solid #ffffff;
+}
+.message:nth-child(even) .imageContainer .image {
+    margin-right: 45px;
+}
+.message:nth-child(even) .contentContainer .info .username {
+    font-weight: bold;
+    color: #ff5d5d
+}

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+@import 'conversation.css';
+@import 'message.css';
+
+/* global style (needed for grid) */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* main view (right now) will be 800px wide, margins shrink to fit */
+body {
+    display: grid;
+    grid-template-columns: 1fr fit-content(800px) 1fr;
+    grid-template-rows: 1fr fit-content(800px) 1fr;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ededed;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* center conversation on screens > 800px wide */
+@media only screen and (min-width: 801px) {
+    body {
+        grid-template-areas: ". . ."
+                             ". conversation ."
+                             ". . .";
+    }
+
+}
+
+/* fill screen with conversation on screens <= 800px wide */
+@media only screen and (max-width: 800px) {
+    body {
+        grid-template-areas: "conversation conversation conversation"
+                             "conversation conversation conversation"
+                             "conversation conversation conversation";
+    }
+    
+}

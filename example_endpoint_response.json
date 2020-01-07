@@ -1,0 +1,38 @@
+{
+    "_comment": "in case the endpoint gets deleted, this is the response it gave",
+    "response": "success",
+    "status": 200,
+    "data": {
+        "conversationDate": "2018-10-14",
+        "messages": [
+            {
+                "username": "Mygel van Trabel",
+                "image": "https://randomuser.me/api/portraits/women/2.jpg",
+                "message": "Hi Charlie! It was good meeting you for coffee the other day, I would love to talk more about your autonomous car start up! Here's my email: webtrabel@email.com",
+                "focused": false,
+                "timestamp": "2018-10-14T13:41:03-04:00"
+            },
+            {
+                "username": "Charlie Hemn",
+                "image": "https://randomuser.me/api/portraits/men/4.jpg",
+                "message": "Thanks, Mygel! It was a pleasure chatting with you as well. You may also be interested in learning more about my new cryptocurrency start up, Goldhill LLC!",
+                "focused": true,
+                "timestamp": "2018-10-14T13:46:16-04:00"
+            },
+            {
+                "username": "Mygel van Trabel",
+                "image": "https://randomuser.me/api/portraits/women/2.jpg",
+                "message": "I recently started a cryptocurrency start up as well! I'll definitely read through the whitepaper posted on the Goldhill website and get back to you!",
+                "focused": false,
+                "timestamp": "2018-10-14T13:50:43-04:00"
+            },
+            {
+                "username": "Charlie Hemn",
+                "image": "https://randomuser.me/api/portraits/men/4.jpg",
+                "message": "Sounds good to me! Looking forward to hearing from you - Charlie.",
+                "focused": false,
+                "timestamp": "2018-10-14T14:03:56-04:00"
+            }
+        ]
+    }
+}
